@@ -1,4 +1,4 @@
-Feature: Testing Selenium
+Feature: Testing elements in Selenium
   As an example, I want to try how Selenium WebDriver can interact with different element
 
   Scenario: Interaction with buttons

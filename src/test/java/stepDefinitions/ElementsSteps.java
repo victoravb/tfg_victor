@@ -8,33 +8,6 @@ import pages.ElementsPage;
 
 public class ElementsSteps extends BaseSteps {
 
-    @Given("^User access toolsqawebsite$")
-    public void userAccessToolsqawebsite() throws Throwable {
-        BasePage.navigateTo("https://demoqa.com/");
-    }
-
-    @Given("^User clicks on element menu$")
-    public void userClicksOnElementMenu() throws Throwable {
-        BasePage.clickOnElement(By.linkText("Elements"));
-    }
-
-    @Given("^El usuario se encuentra en la pagina Home de imalittletester$")
-    public void el_usuario_se_encuentra_en_la_pagina_Home_de_imalittletester() throws Throwable {
-        Assert.assertTrue(homePage.homePageIsDisplayed());
-    }
-
-    @When("^Hace click sobre el boton The little tester comics$")
-    public void hace_click_sobre_el_boton_The_little_tester_comics() throws Throwable {
-        homePage.clickOnTitleComics();
-        System.out.println("ELEMENTO: " + homePage.titleComicsLocator);
-        homePage.titleComicsLocator.click();
-    }
-
-    @Then("^Se debe redirigir a la pantalla Comics$")
-    public void se_debe_redirigir_a_la_pantalla_Comics() throws Throwable {
-        Assert.assertTrue("No se redirecciono correctamente a la página de Comics", comicPage.isTitleComicsDisplayed());
-    }
-
     @Given("^User access to \"([^\"]*)\" website$")
     public void userAccessToWebsite(String url) throws Throwable {
         BasePage.navigateTo(url);
